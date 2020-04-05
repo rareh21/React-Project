@@ -1,0 +1,15 @@
+.menu {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.menu-item {
+  width: auto;
+  cursor: pointer;
+  padding: 5px;
+  height: 25px;
+}
+.menu-item:hover {
+  color: #2980b9;
+}

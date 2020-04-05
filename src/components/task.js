@@ -23,9 +23,7 @@ class Form extends React.Component {
         this.setState({
             taskList: this.state.taskList.filter((s, sindex) => index !== sindex),
         });
-        // const taskList1 = [...this.state.taskList];
-        // taskList1.splice(index, 1);
-        // this.setState({ taskList: taskList1 });
+        
     }
     clickOnDelete(record) {
         this.setState({

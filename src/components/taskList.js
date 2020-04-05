@@ -1,5 +1,7 @@
 import React from "react";
 import Datefce from "./Datefce"; 
+// import ReactPopup from './ReactPopup';
+import PopReact from './PopReact';
 import 'bootstrap/dist/css/bootstrap.min.css' 
 const TaskList = (props) => {
   return (
@@ -8,7 +10,9 @@ const TaskList = (props) => {
       return (
         <tr key={val.index}>
           <td>
+            
             <input type="text"  name="payment_type" data-id={idx} id={payment_type} className="form-control " />
+            <PopReact />
           </td>
           <td>
             <input type="text"  name="payment_description" id={payment_description} data-id={idx} className="form-control " />

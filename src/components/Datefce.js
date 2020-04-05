@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DatePicker from 'react-date-picker';
 class Datefce extends Component {
   state = {
-    date: new Date(),
+    date: "",
   }
  
   onChange = date => this.setState({ date })
