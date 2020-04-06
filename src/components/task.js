@@ -1,5 +1,8 @@
 import React from "react"
 import TaskList from "./taskList"
+import Example from './CheckboxReact';
+import ReactButton from './ReactButton';
+
 class Form extends React.Component {
     state = {
         taskList: [{ index: Math.random(), payment_type: "", payment_description: "", payment_code: "", payment_code_description: "", from_date: "", to_date: "", currency_id: "", currency: "", base_currency: "", currency_amount: "" }]
@@ -39,7 +42,9 @@ class Form extends React.Component {
                         <div className="col-sm-1"></div>
                         <div className="col-sm-12">
                             <div className="card">
-                            <div className="card-header text-center">Task</div>
+                            <ReactButton />
+                            <div className="card-header text-left">Fixed Allowance</div>
+                            <Example />
                                 <div className="card-body">
                                     <table className="table">
                                         <thead>

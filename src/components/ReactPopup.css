@@ -1,15 +1,4 @@
-.menu {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  background: #ffffff;
-}
-.menu-item {
-  width: auto;
-  cursor: pointer;
-  padding: 5px;
-  height: 25px;
-}
-.menu-item:hover {
-  color: #2980b9;
+.Example {
+  padding-top: 100px;
+  background: #8a1a1a;
 }
