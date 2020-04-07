@@ -15,7 +15,7 @@ class Example extends React.Component {
     render() {
       return (
         <form>
-            <label style={{display: 'inline'}}>
+            <label style={{display: 'inline',marginRight:50}}>
                 <input type="checkbox"
                 checked={this.state.isChecked}
                 onChange={this.toggleChange}

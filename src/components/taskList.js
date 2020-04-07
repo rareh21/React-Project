@@ -1,7 +1,6 @@
 import React from "react";
 import Datefce from "./Datefce"; 
-// import ReactPopup from './ReactPopup';
-import PopReact from './PopReact';
+import SimpleDialogDemo from './Dialog';
 import 'bootstrap/dist/css/bootstrap.min.css' 
 const TaskList = (props) => {
   return (
@@ -9,19 +8,22 @@ const TaskList = (props) => {
       let payment_type = `payment_type-${idx}`, payment_description = `payment_description-${idx}`, payment_code = `payment_code-${idx}`, payment_code_description = `payment_code_description-${idx}`, from_date = `from_date-${idx}`, to_date = `to_date-${idx}`, currency_id = `currency_id-${idx}`, currency = `currency-${idx}`, base_currency = `base_currency-${idx}`, currency_amount = `currency_amount-${idx}`
       return (
         <tr key={val.index}>
-          <td>
-            
+          <td >
             <input type="text"  name="payment_type" data-id={idx} id={payment_type} className="form-control " />
-            <PopReact />
+            
+            
           </td>
           <td>
             <input type="text"  name="payment_description" id={payment_description} data-id={idx} className="form-control " />
+            
           </td>
           <td>
             <input type="text"  name="payment_code" id={payment_code} data-id={idx} className="form-control " />
+            
           </td>
           <td>
             <input type="text"  name="payment_code_description" id={payment_code_description} data-id={idx} className="form-control " />
+            
           </td>
           <td>
             <Datefce >
@@ -41,9 +43,11 @@ const TaskList = (props) => {
           </td>
           <td>
             <input type="text"  name="base_currency" id={base_currency} data-id={idx} className="form-control " />
+           
           </td>
           <td>
             <input type="text"  name="currency_amount" id={currency_amount  } data-id={idx} className="form-control " />
+           
           </td>
 
           <td>
