@@ -1,21 +1,63 @@
-import React, { Component } from "react";
-import { Button } from "reactstrap";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import KeyboardVoiceIcon from '@material-ui/icons/KeyboardVoice';
+import Icon from '@material-ui/core/Icon';
+import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import SaveIcon from '@material-ui/icons/Save';
-import CloseIcon from '@material-ui/icons/Close';
-import RestoreIcon from '@material-ui/icons/Restore';
 
-class ReactButton extends Component {
-  render() {
-    return (
-      <div>
-        <Button style={{marginRight:5, marginTop:3, marginBottom:5}} color="info" size="sm" className="float-right">Close <CloseIcon /></Button>{' '}
-        <Button style={{marginRight:3, marginTop:3, marginBottom:5}} color="success" size="sm" className="float-right">Reset <RestoreIcon /></Button>{' '}
-        <Button style={{marginRight:3, marginTop:3, marginBottom:5}} color="secondary" size="sm" className="float-right">Save & Close <SaveIcon /></Button>{' '}
-        <Button style={{marginRight:3, marginTop:3, marginBottom:5}} color="primary" size="sm" className="float-right">Save <SaveIcon /></Button>{' '}
-        
-      </div>
-    );
-  }
+const useStyles = makeStyles((theme) => ({
+  button: {
+    margin: theme.spacing(1),
+  },
+}));
+
+export default function ReactButton() {
+  const classes = useStyles();
+
+  return (
+    <div style={{display:"inline"}} className="float-right">
+      <Button
+        variant="contained"
+        color="primary"
+        size="small"
+        className={classes.button}
+        startIcon={<SaveIcon />}
+      >
+        Save
+      </Button>
+
+      <Button
+        variant="contained"
+        color="primary"
+        size="small"
+        className={classes.button}
+        // startIcon={<CloseOutlinedIcon />}
+      >
+        Save & Close
+      </Button>
+
+      <Button
+        variant="contained"
+        color="default"
+        size="small"
+        className="float-right"
+        className={classes.button}
+        // startIcon={<CloudUploadIcon />}
+      >
+        Reset
+      </Button>
+      <Button
+        variant="contained"
+        color="secondary"
+        size="small"
+        className={classes.button}
+        startIcon={<CloseOutlinedIcon />}
+      >
+        Close
+      </Button>
+    </div>
+  );
 }
-
-export default ReactButton;

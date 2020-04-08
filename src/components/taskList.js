@@ -8,43 +8,43 @@ const TaskList = (props) => {
       let payment_type = `payment_type-${idx}`, payment_description = `payment_description-${idx}`, payment_code = `payment_code-${idx}`, payment_code_description = `payment_code_description-${idx}`, from_date = `from_date-${idx}`, to_date = `to_date-${idx}`, currency_id = `currency_id-${idx}`, currency = `currency-${idx}`, base_currency = `base_currency-${idx}`, currency_amount = `currency_amount-${idx}`
       return (
         <tr key={val.index}>
-          <td >
-            <input type="text"  name="payment_type" data-id={idx} id={payment_type}  style={{width:50}} />   
-            <SimpleDialogDemo style={{}} />
+          <td colSpan="1" style={{}}>
+            <input type="text"  name="payment_type" data-id={idx} id={payment_type}  style={{width:80}} />   
+            <SimpleDialogDemo />
           </td>
-          <td>
-            <input type="text"  name="payment_description" id={payment_description} data-id={idx}  style={{width:100}} />
-
+          <td colSpan="1">
+            <input type="text"  name="payment_description" id={payment_description} data-id={idx}  style={{width:80}} />
+            <SimpleDialogDemo />
           </td>
-          <td>
-            <input type="text"  name="payment_code" id={payment_code} data-id={idx}  style={{width:50}} />
-
+          <td colSpan="1">
+            <input type="text"  name="payment_code" id={payment_code} data-id={idx}  style={{width:80}} />
+            <SimpleDialogDemo />
           </td>
-          <td>
+          <td colSpan="1">
             <input type="text"  name="payment_code_description" id={payment_code_description} data-id={idx}  style={{width:80}} />
-
+            <SimpleDialogDemo />
           </td>
-          <td>
+          <td colSpan="1">
             <Datefce />
           </td>
-          <td>
+          <td colSpan="1">
           <Datefce />
           </td>
-          <td>
-            <input type="text"  name="currency_id" id={currency_id} data-id={idx}  style={{width:60}} />
-
+          <td colSpan="1">
+            <input type="text"  name="currency_id" id={currency_id} data-id={idx}  style={{width:80}} />
+            <SimpleDialogDemo />
           </td>
-          <td>
+          <td colSpan="1">
             <input type="text"  name="currency" id={currency} data-id={idx}  style={{width:80}} />
-
+            <SimpleDialogDemo />
           </td>
-          <td>
+          <td colSpan="1">
             <input type="text"  name="base_currency" id={base_currency} data-id={idx}  style={{width:80}} />
-
+            <SimpleDialogDemo />
           </td>
-          <td>
+          <td colSpan="1">
             <input type="text"  name="currency_amount" id={currency_amount  } data-id={idx}  style={{width:80}} />
-
+            <SimpleDialogDemo />
           </td>
 
           <td>
@@ -58,4 +58,4 @@ const TaskList = (props) => {
     })
   )
 }
-export default TaskList
+export default TaskList;

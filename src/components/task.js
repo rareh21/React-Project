@@ -1,8 +1,5 @@
 import React from "react"
 import TaskList from "./taskList"
-import Example from './CheckboxReact';
-import ReactButton from './ReactButton';
-
 class Form extends React.Component {
     state = {
         taskList: [{ index: Math.random(), payment_type: "", payment_description: "", payment_code: "", payment_code_description: "", from_date: "", to_date: "", currency_id: "", currency: "", base_currency: "", currency_amount: "" }]
@@ -38,27 +35,23 @@ class Form extends React.Component {
         return (
             <div className="content">
                 <form onSubmit={this.handleSubmit} onChange={this.handleChange} >
-                    <div className="row" style={{ marginTop: 20 }}>
-                        <div className="col-sm-1"></div>
+                    <div className="row" style={{ marginTop: 10 }}>
                         <div className="col-sm-12">
                             <div className="card">
-                            <ReactButton />
-                            <div className="card-header text-left">Fixed Allowance</div>
-                            <Example />
                                 <div className="card-body">
-                                    <table className="table">
+                                    <table className="table" size="sm">
                                         <thead>
                                             <tr>
-                                                <th>Payment Type</th>
-                                                <th>Payment Description</th>
-                                                <th>Payment Code</th>
-                                                <th>Payment Code Description</th>
-                                                <th>From Date</th>
-                                                <th>To Date</th>
-                                                <th>Currency ID</th>
-                                                <th>Currency</th>
-                                                <th>Base Currency</th>
-                                                <th>Currency Amount</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Payment Type</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Payment Description</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Payment Code</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Payment Code Description</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>From Date</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>To Date</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Currency ID</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Currency</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Base Currency</th>
+                                                <th style={{fontFamily:'Serif', textAlign:'left', fontSize:15}}>Currency Amount</th>
                                             </tr>
                                         </thead>
                                         <tbody>

@@ -3,22 +3,17 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import { makeStyles } from "@material-ui/core/styles";
 import ListItemText from '@material-ui/core/ListItemText';
 import Dialog from '@material-ui/core/Dialog';
 import AddIcon from '@material-ui/icons/Add';
 import Typography from '@material-ui/core/Typography';
+import Filter1Icon from '@material-ui/icons/Filter1';
 
 const payment_type = ['A', 'B'];
-// const useStyles = makeStyles({
-//   avatar: {
-//     backgroundColor: blue[100],
-//     color: blue[600],
-//   },
-// });
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, open } = props;
-
   const handleClose = () => {
     onClose(selectedValue);
   };
@@ -61,7 +56,7 @@ export default function SimpleDialogDemo() {
   };
   const mystyle = {
     position: "relative",
-    left: 35,
+    left: 50,
     bottom: 85
   };
 
@@ -69,8 +64,7 @@ export default function SimpleDialogDemo() {
     <div >
       <Typography variant="subtitle1"> {selectedValue}</Typography>
       <br />
-
-      <AddIcon onClick={handleClickOpen} style={mystyle} />
+      <Filter1Icon variant="outlined" color="primary" onClick={handleClickOpen} style={mystyle} />
 
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
