@@ -29,16 +29,13 @@ function SimpleDialog(props) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      {/* <DialogTitle id="simple-dialog-title"></DialogTitle> */}
+   
       <List>
         {payment_type.map((pt) => (
           <ListItem button onClick={() => handleListItemClick(pt)} key={pt}>
             <ListItemText primary={pt} />
           </ListItem>
         ))}
-
-        <ListItem autoFocus button onClick={() => handleListItemClick('addAccount')}>
-        </ListItem>
       </List>
     </Dialog>
   );
@@ -62,14 +59,19 @@ export default function SimpleDialogDemo() {
     setOpen(false);
     setSelectedValue(value);
   };
+  const mystyle = {
+    position: "relative",
+    left: 35,
+    bottom: 85
+  };
 
   return (
-    <div>
+    <div >
       <Typography variant="subtitle1"> {selectedValue}</Typography>
       <br />
-      <Button variant="outlined" color="primary" onClick={handleClickOpen} >
-      <AddIcon />
-      </Button>
+
+      <AddIcon onClick={handleClickOpen} style={mystyle} />
+
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
     </div>
   );

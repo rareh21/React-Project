@@ -9,45 +9,42 @@ const TaskList = (props) => {
       return (
         <tr key={val.index}>
           <td >
-            <input type="text"  name="payment_type" data-id={idx} id={payment_type} className="form-control " />
-            
-            
+            <input type="text"  name="payment_type" data-id={idx} id={payment_type}  style={{width:50}} />   
+            <SimpleDialogDemo style={{}} />
           </td>
           <td>
-            <input type="text"  name="payment_description" id={payment_description} data-id={idx} className="form-control " />
-            
+            <input type="text"  name="payment_description" id={payment_description} data-id={idx}  style={{width:100}} />
+
           </td>
           <td>
-            <input type="text"  name="payment_code" id={payment_code} data-id={idx} className="form-control " />
-            
+            <input type="text"  name="payment_code" id={payment_code} data-id={idx}  style={{width:50}} />
+
           </td>
           <td>
-            <input type="text"  name="payment_code_description" id={payment_code_description} data-id={idx} className="form-control " />
-            
+            <input type="text"  name="payment_code_description" id={payment_code_description} data-id={idx}  style={{width:80}} />
+
           </td>
           <td>
-            <Datefce >
-            <input type="text"  name="from_date" id={from_date} data-id={idx} className="form-control " />
-            </Datefce>
+            <Datefce />
           </td>
           <td>
-            <Datefce>
-            <input type="text"  name="to_date" id={to_date} data-id={idx} className="form-control " />
-            </Datefce>
+          <Datefce />
           </td>
           <td>
-            <input type="text"  name="currency_id" id={currency_id} data-id={idx} className="form-control " />
+            <input type="text"  name="currency_id" id={currency_id} data-id={idx}  style={{width:60}} />
+
           </td>
           <td>
-            <input type="text"  name="currency" id={currency} data-id={idx} className="form-control " />
+            <input type="text"  name="currency" id={currency} data-id={idx}  style={{width:80}} />
+
           </td>
           <td>
-            <input type="text"  name="base_currency" id={base_currency} data-id={idx} className="form-control " />
-           
+            <input type="text"  name="base_currency" id={base_currency} data-id={idx}  style={{width:80}} />
+
           </td>
           <td>
-            <input type="text"  name="currency_amount" id={currency_amount  } data-id={idx} className="form-control " />
-           
+            <input type="text"  name="currency_amount" id={currency_amount  } data-id={idx}  style={{width:80}} />
+
           </td>
 
           <td>

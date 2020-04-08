@@ -1,47 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
-class Example extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        isChecked: true,
-      };
-    }
-    toggleChange = () => {
-      this.setState({
-        isChecked: !this.state.isChecked,
-      });
-    }
-    render() {
-      return (
-        <form>
-            <label style={{display: 'inline',marginRight:50}}>
-                <input type="checkbox"
-                checked={this.state.isChecked}
-                onChange={this.toggleChange}
-                />
-                Active
-            </label>
+export default function Example() {
+  const [value, setValue] = React.useState('active');
 
-            <label style={{display: 'inline'}}>
-                <input type="checkbox"
-                checked={!this.state.isChecked}
-                onChange={this.toggleChange}
-                />
-                History
-            </label>
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
+  return (
+    <FormControl component="fieldset">
+      <RadioGroup aria-label="display" name="display1" value={value} onChange={handleChange} style={{display:'inline', textAlign:"left"}} >
+        <FormControlLabel value="active" control={<Radio />} label="Active" />
+        <FormControlLabel value="history" control={<Radio />} label="History" />
+      </RadioGroup>
+    </FormControl>
+  );
+}
 
-
-
-        </form>
-        
-      );
-    }
-  }
-  
     
-    
-    
-
-export default Example

@@ -49,8 +49,8 @@ class Form extends React.Component {
                                     <table className="table">
                                         <thead>
                                             <tr>
-                                                <th className="required" >Payment Type</th>
-                                                <th className="required" >Payment Description</th>
+                                                <th>Payment Type</th>
+                                                <th>Payment Description</th>
                                                 <th>Payment Code</th>
                                                 <th>Payment Code Description</th>
                                                 <th>From Date</th>
