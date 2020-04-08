@@ -56,7 +56,7 @@ export default function SimpleDialogDemo() {
   };
   const mystyle = {
     position: "relative",
-    left: 50,
+    left: 41,
     bottom: 85
   };
 
