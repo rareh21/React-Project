@@ -23,7 +23,7 @@ function SimpleDialog(props) {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
+    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} >
    
       <List>
         {payment_type.map((pt) => (
